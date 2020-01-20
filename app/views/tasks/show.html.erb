@@ -1,0 +1,19 @@
+<h1>Detailed Task</h1>
+
+<p>Title: <%= @task.title %></p>
+<p>Detail: <%= @task.details %></p>
+<!-- <p>Completed: <%= @task.completed %></p> -->
+<% if @task.completed == true %>
+    <p>[x]</p>
+<% else %>
+    <p>[ ]</p>
+<% end %>
+
+<%= link_to "Back to Tasks", tasks_path %>
+
+<%= link_to "edit task", edit_task_path(@task) %>
+
+<hr>
+
+<%= link_to "Add new tasks", new_task_path %>
+
